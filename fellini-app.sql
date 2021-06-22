@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Giu 22, 2021 alle 14:51
+-- Creato il: Giu 22, 2021 alle 15:46
 -- Versione del server: 10.4.17-MariaDB
 -- Versione PHP: 7.4.15
 
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `casts` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `cast_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `film_id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+                         `id` bigint(20) UNSIGNED NOT NULL,
+                         `cast_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `film_id` bigint(20) UNSIGNED NOT NULL,
+                         `created_at` timestamp NULL DEFAULT NULL,
+                         `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -57,13 +57,13 @@ INSERT INTO `casts` (`id`, `cast_name`, `film_id`, `created_at`, `updated_at`) V
 --
 
 CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+                               `id` bigint(20) UNSIGNED NOT NULL,
+                               `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+                               `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -73,14 +73,14 @@ CREATE TABLE `failed_jobs` (
 --
 
 CREATE TABLE `films` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `director` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `year` int(11) NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imageUrl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+                         `id` bigint(20) UNSIGNED NOT NULL,
+                         `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `director` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `year` int(11) NOT NULL,
+                         `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `imageUrl` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `created_at` timestamp NULL DEFAULT NULL,
+                         `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -88,9 +88,9 @@ CREATE TABLE `films` (
 --
 
 INSERT INTO `films` (`id`, `name`, `director`, `year`, `description`, `imageUrl`, `created_at`, `updated_at`) VALUES
-(1, 'Amarcord', 'One year in a small northern Italian coastal town in the late 1930s is presented. The slightly off-kilter cast of characters are affected by time and location', 1973, 'https://m.media-amazon.com/images/M/MV5BZDI2OTg2NDQtMzc0MC00MjRiLWI1NzAtMjY2ZDMwMmUyNzBiXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_UX182_CR0,0,182,268_AL_.jpg', 'Federico Fellini', '2021-06-22 09:08:55', '2021-06-22 09:09:08'),
-(2, 'La dolce vita', 'Rome, 1959/60. Marcello Rubini (played by Marcello Mastroianni) is a writer and journalist, the worst kind of journalist - a tabloid journalist, or paparazzo. His job involves him trying to catch celebrities in compromising or embarrassing situations. He ', 1960, 'https://m.media-amazon.com/images/M/MV5BODQ0NzY5NGEtYTc5NC00Yjg4LTg4Y2QtZjE2MTkyYTNmNmU2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UY268_CR4,0,182,268_AL_.jpg', 'Federico Fellini', '2021-06-22 09:09:01', '2021-06-22 09:09:12'),
-(3, 'La strada', 'Sad story of a waif, Gelsomina, who is sold by her mother to Zampano for 10,000 lire and a few kilos of food. Zampano is a traveling showman who exhibits feats of strength by breaking a chain wrapped around his chest. He performs in village squares and th', 1954, 'https://m.media-amazon.com/images/M/MV5BYjUyOGMyMTQtYTM5Yy00MjFiLTk2OGItMWYwMDc2YmM1YzhiXkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_UY268_CR5,0,182,268_AL_.jpg', 'Federico Fellini', '2021-06-22 09:09:05', '2021-06-22 09:09:13');
+(1, 'Amarcord', 'Federico Fellini', 1973, 'One year in a small northern Italian coastal town in the late 1930s is presented. The slightly off-kilter cast of characters are affected by time and location', 'https://m.media-amazon.com/images/M/MV5BZDI2OTg2NDQtMzc0MC00MjRiLWI1NzAtMjY2ZDMwMmUyNzBiXkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_UX182_CR0,0,182,268_AL_.jpg', '2021-06-22 09:08:55', '2021-06-22 09:09:08'),
+(2, 'La dolce vita', 'Federico Fellini', 1960, 'Rome, 1959/60. Marcello Rubini (played by Marcello Mastroianni) is a writer and journalist, the worst kind of journalist - a tabloid journalist, or paparazzo. His job involves him trying to catch celebrities in compromising or embarrassing situations. He ', 'https://m.media-amazon.com/images/M/MV5BODQ0NzY5NGEtYTc5NC00Yjg4LTg4Y2QtZjE2MTkyYTNmNmU2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UY268_CR4,0,182,268_AL_.jpg', '2021-06-22 09:09:01', '2021-06-22 09:09:12'),
+(3, 'La strada', 'Federico Fellini', 1954, 'Sad story of a waif, Gelsomina, who is sold by her mother to Zampano for 10,000 lire and a few kilos of food. Zampano is a traveling showman who exhibits feats of strength by breaking a chain wrapped around his chest. He performs in village squares and th', 'https://m.media-amazon.com/images/M/MV5BYjUyOGMyMTQtYTM5Yy00MjFiLTk2OGItMWYwMDc2YmM1YzhiXkEyXkFqcGdeQXVyMjA0MzYwMDY@._V1_UY268_CR5,0,182,268_AL_.jpg', '2021-06-22 09:09:05', '2021-06-22 09:09:13');
 
 -- --------------------------------------------------------
 
@@ -99,9 +99,9 @@ INSERT INTO `films` (`id`, `name`, `director`, `year`, `description`, `imageUrl`
 --
 
 CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `batch` int(11) NOT NULL
+                              `id` int(10) UNSIGNED NOT NULL,
+                              `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                              `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -122,9 +122,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL
+                                   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                                   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -134,14 +134,14 @@ CREATE TABLE `password_resets` (
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
+                         `id` bigint(20) UNSIGNED NOT NULL,
+                         `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `email_verified_at` timestamp NULL DEFAULT NULL,
+                         `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+                         `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+                         `created_at` timestamp NULL DEFAULT NULL,
+                         `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -152,38 +152,38 @@ CREATE TABLE `users` (
 -- Indici per le tabelle `casts`
 --
 ALTER TABLE `casts`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
-  ADD PRIMARY KEY (`id`),
+    ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
 -- Indici per le tabelle `films`
 --
 ALTER TABLE `films`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `migrations`
 --
 ALTER TABLE `migrations`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `password_resets`
 --
 ALTER TABLE `password_resets`
-  ADD KEY `password_resets_email_index` (`email`);
+    ADD KEY `password_resets_email_index` (`email`);
 
 --
 -- Indici per le tabelle `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
+    ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
@@ -194,31 +194,31 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `casts`
 --
 ALTER TABLE `casts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT per la tabella `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `films`
 --
 ALTER TABLE `films`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+    MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT per la tabella `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+    MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
